@@ -8,7 +8,8 @@ class Chocolate extends Sweetness {
         super(name, weight, price);//наследуем параметры из класса сладость
     }
     public String properties (){
-        return "Шоколад"+getName()+"вес"+getWeight()+getPrice();
+        return "Шоколад "+getName()+", вес "+getWeight()+", цена "+getPrice();
         //вытаскиваем параметры через гетер, тк переменные приватные
+
     }
 }

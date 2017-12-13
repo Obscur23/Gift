@@ -32,7 +32,7 @@ public class Sweetness { //класс сладость для подарка, п
     public void setPrice (float price){
         this.price = price;
     }
-    public void printSweet() { //метод для вывода свойств сладости
+    public void printSweet() { //метод для вывода свойств сладости,
         System.out.println("Name:" + name);
         System.out.println("Weight:" + weight);
         System.out.println("Price:" + price);
