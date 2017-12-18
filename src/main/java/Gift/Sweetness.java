@@ -4,7 +4,7 @@ package Gift;
  * Created by Obscur on 10.12.17.
  * Конструктор сладости
  */
-public class Sweetness { //класс сладость для подарка, переменные недоступны
+public abstract class Sweetness { //класс сладость для подарка, переменные недоступны
     private String name; //название
     private float weight; //вес
     private float price; //цена
