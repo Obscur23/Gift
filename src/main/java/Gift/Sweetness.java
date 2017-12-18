@@ -32,6 +32,7 @@ public abstract class Sweetness { //класс сладость для пода�
     public void setPrice (float price){
         this.price = price;
     }
+    public abstract String properties();
     public void printSweet() { //метод для вывода свойств сладости,
         System.out.println("Name:" + name);
         System.out.println("Weight:" + weight);

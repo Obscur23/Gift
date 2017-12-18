@@ -9,21 +9,22 @@ public class Gift {
     private float allPrice = 0;
 
     public void addSweetness(Sweetness sweet) {//будем добавлять
-        int counter = mSweetness.length;//инит счетчика = количеству сладостей в массиве
+        int counter = mSweetness.length;//инит счетчика = количеству в массиве
         Sweetness[] newSweetness = new Sweetness[counter + 1];//создаем новый массив длиной +1
         for (int i = 0; i < counter; i++) {
             newSweetness[i] = mSweetness[i];
         }
         newSweetness[counter] = sweet;
         mSweetness = newSweetness;
-        allWeight +=Sweetness.getWeight();
-        allPrice += Sweetness.getPrice();
+        allWeight +=sweet.getWeight();
+        allPrice += sweet.getPrice();
     }
 
     public void printItems() {
         for (int i = 0; i < mSweetness.length; i++) {
             System.out.println(mSweetness[i].properties());
         }
+        System.out.println("allWeight =" + allWeight + "  allPrice = " + allPrice + "  Total count = " + mSweetness.length);
     }
 
     public double getTotalWeight() {

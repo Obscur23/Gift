@@ -7,7 +7,7 @@ class Chocolate extends Sweetness {
     public Chocolate (String name, float weight, float price) {
         super(name, weight, price);//наследуем параметры из класса сладость
     }
-    public String properties (){
+    @Override public String properties (){
         return "Chocolate "+getName()+", weight "+getWeight()+", price "+getPrice();
         //вытаскиваем параметры через гетер, тк переменные приватные
 
