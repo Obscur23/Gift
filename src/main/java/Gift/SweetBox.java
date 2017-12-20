@@ -1,16 +1,11 @@
 package Gift;
 
-import enums.SweetnessTypes;
-
 import java.util.ArrayList;
-import java.util.List;
 
 /**
- * Created by user on 20.12.2017.
+ * Здесь определяем методы обработки списка
  */
-public class SweetBox extends ArrayList<Sweetness> {
-
-
+public class SweetBox extends ArrayList<Sweetness> {//общий вес
 
     public int getTotalWeight()
     {
@@ -22,14 +17,22 @@ public class SweetBox extends ArrayList<Sweetness> {
         return  w;
     }
 
-
+    public int getTotaPrice()//общая цена
+    {
+        int w=0;
+        for(Sweetness sw : this)
+        {
+            w+=sw.getPrice();
+        }
+        return  w;
+    }
 
     public int getChockWeight()
     {
         int w=0;
         for(Sweetness sw : this)
         {
-            if(sw.getClass()==Chocolate.class) {
+            if(sw.getClass()==Chocolate.class) {//вес шоколада
                 w += sw.getWeight();
             }
         }
