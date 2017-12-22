@@ -22,8 +22,11 @@ public class Base {
         {
            sw.printSweet();
         }
-     System.out.println(box.getTotalWeight());
-        System.out.println(box.getChockWeight());
+     System.out.println("Total Weight = "+box.getTotalWeight());
+        System.out.println("Total Price = "+box.getTotaPrice());
+
+        System.out.println("Cocolate Weight = "+box.getChockWeight());
+
         //System.out.println(input.allWeight);
 
     }
