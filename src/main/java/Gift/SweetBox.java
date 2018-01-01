@@ -1,5 +1,8 @@
 package Gift;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 
 /**
@@ -38,4 +41,5 @@ public class SweetBox extends ArrayList<Sweetness> {//общий вес
         }
         return  w;
     }
+
 }

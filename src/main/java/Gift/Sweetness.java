@@ -1,4 +1,5 @@
 package Gift;
+import java.io.*;
 
 /**
  * Created by Obscur on 10.12.17.
@@ -37,5 +38,24 @@ public abstract class Sweetness { //класс сладость для пода�
         System.out.println("Name:" + name);
         System.out.println("Weight:" + weight);
         System.out.println("Price:" + price);
+    }
+
+    public void fileRecord(){
+        String text = "Hello world";
+        BufferedWriter output = null;
+        try {
+            File file = new File("record.txt");
+            output = new BufferedWriter(new FileWriter(file));
+
+            output.write(text);
+        } catch ( IOException e ) {
+            e.printStackTrace();
+        } finally {
+            if ( output != null ) try {
+                output.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
