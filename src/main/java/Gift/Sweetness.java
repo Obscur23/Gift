@@ -7,7 +7,7 @@ import java.io.*;
  */
 public abstract class Sweetness { //класс сладость для подарка, переменные недоступны
     private String name; //название
-    private float weight = 5; //вес
+    private float weight; //вес
     private float price; //цена
     //Конструктор класса
     Sweetness(String name, float weight, float price){
@@ -35,37 +35,26 @@ public abstract class Sweetness { //класс сладость для пода�
     }
     public abstract String properties();
     public void printSweet() { //метод для вывода свойств сладости,
-        System.out.println("Name:" + name);
-        System.out.println("Weight:" + weight);
-        System.out.println("Price:" + price);
+        System.out.println("Name:" + name+"  Weight:" + weight+"  Price:" + price);
     }
+    public void fileR() {
 
-    public void fileRecord(){
-        String text = "Hello world";
-        BufferedWriter output = null;
-        try {
-            File file = new File("record.txt");
-            output = new BufferedWriter(new FileWriter(file));
+        try(FileWriter writer = new FileWriter("file1.txt", true))
+        {
+            // запись всей строки
+            writer.write("Name:" + name+"  Weight:" + weight+"  Price:" + price);
+            // перенос строки
+            writer.append('\n');
 
-            output.write(text);
-        } catch ( IOException e ) {
-            e.printStackTrace();
-        } finally {
-            if ( output != null ) try {
-                output.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+            writer.flush();
+            writer.close();
+        }
+        catch(IOException ex){
+
+            System.out.println("Record Problem");
         }
     }
 
-        public void fileR (String[] args) throws Exception {
 
-            FileWriter nFile = new FileWriter("file1.txt");
-
-            nFile.write("Хокку \nПодобен лучу самурайский клинок \nИ тот затупился \nПроклятая килька в томате!!");
-
-            nFile.close();
-        }
     }
-}
+
