@@ -7,7 +7,7 @@ import java.io.*;
  */
 public abstract class Sweetness { //класс сладость для подарка, переменные недоступны
     private String name; //название
-    private float weight; //вес
+    private float weight = 5; //вес
     private float price; //цена
     //Конструктор класса
     Sweetness(String name, float weight, float price){
@@ -56,6 +56,16 @@ public abstract class Sweetness { //класс сладость для пода�
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+        public void fileR (String[] args) throws Exception {
+
+            FileWriter nFile = new FileWriter("file1.txt");
+
+            nFile.write("Хокку \nПодобен лучу самурайский клинок \nИ тот затупился \nПроклятая килька в томате!!");
+
+            nFile.close();
         }
     }
 }
