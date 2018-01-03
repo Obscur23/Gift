@@ -16,7 +16,7 @@ public class Base {
         Userinput input=new Userinput();
         SweetBox box=input.Userinput();
 
-        try (FileWriter writer = new FileWriter("file1.txt")){}//удаляем файл перед записью
+        try (FileWriter writer = new FileWriter("gift.txt")){}//удаляем файл перед записью
 
         catch (IOException ex) {
 

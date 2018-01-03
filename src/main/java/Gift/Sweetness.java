@@ -39,7 +39,7 @@ public abstract class Sweetness { //класс сладость для пода�
     }
     public void fileR() {//метод для записи выбора в файл
 
-        try (FileWriter writer = new FileWriter("file1.txt", true)) {
+        try (FileWriter writer = new FileWriter("gift.txt", true)) {//здесь добавление, файл инициирован в классе Base
             // запись всей строки
             writer.write("Name:" + name + "  Weight:" + weight + "  Price:" + price);
             // перенос строки
