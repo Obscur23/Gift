@@ -1,6 +1,7 @@
 package Gift;
-
+import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -11,8 +12,16 @@ import java.util.ArrayList;
  */
 public class Base {
     public static void main(String[] args){
+
         Userinput input=new Userinput();
         SweetBox box=input.Userinput();
+
+        try (FileWriter writer = new FileWriter("file1.txt")){}//удаляем файл перед записью
+
+        catch (IOException ex) {
+
+                System.out.println("Delete Problem");
+            }
         for(Sweetness sw:box)
         {
            sw.printSweet();

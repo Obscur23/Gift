@@ -37,19 +37,17 @@ public abstract class Sweetness { //класс сладость для пода�
     public void printSweet() { //метод для вывода свойств сладости,
         System.out.println("Name:" + name+"  Weight:" + weight+"  Price:" + price);
     }
-    public void fileR() {
+    public void fileR() {//метод для записи выбора в файл
 
-        try(FileWriter writer = new FileWriter("file1.txt", true))
-        {
+        try (FileWriter writer = new FileWriter("file1.txt", true)) {
             // запись всей строки
-            writer.write("Name:" + name+"  Weight:" + weight+"  Price:" + price);
+            writer.write("Name:" + name + "  Weight:" + weight + "  Price:" + price);
             // перенос строки
             writer.append('\n');
 
             writer.flush();
             writer.close();
-        }
-        catch(IOException ex){
+        } catch (IOException ex) {
 
             System.out.println("Record Problem");
         }
@@ -57,4 +55,7 @@ public abstract class Sweetness { //класс сладость для пода�
 
 
     }
+
+
+
 
